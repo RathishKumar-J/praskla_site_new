@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div id="modal-backdrop" onclick="closeAllCards()"></div>
     <div id="app">
       <header>
         <nav class="container">
@@ -113,6 +114,117 @@
             </div>
           </div>
         </section>
+        <section id="services" class="services">
+          <div class="container services-wrapper">
+            <div class="services-left">
+              <div class="services-list">
+                <div class="service-card-wrapper">
+                  <div class="service-card" onclick="selectServiceCard(this)">
+                    <div class="service-card-header">
+                      <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                      </div>
+                      <div class="service-title-group">
+                        <h3>Development</h3>
+                        <p>Web Development</p>
+                      </div>
+                      
+                    </div>
+                    <div class="service-card-content">
+                      <p>We build responsive, scalable web applications using modern technologies and best practices. Our focus is on performance, usability, and future-ready digital solutions.</p>
+                      <ul>
+                        <li>Experienced team delivering reliable and high-quality development</li>
+                        <li>End-to-end process from planning and development to deployment</li>
+                        <li>Scalable solutions tailored for startups and growing businesses</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-card-wrapper">
+                  <div class="service-card" onclick="selectServiceCard(this)">
+                    <div class="service-card-header">
+                      <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+                      </div>
+                      <div class="service-title-group">
+                        <h3>Development</h3>
+                        <p>App Development</p>
+                      </div>
+                      
+                    </div>
+                    <div class="service-card-content">
+                      <p>We build high-performance mobile applications for iOS and Android using native and cross-platform technologies.</p>
+                      <ul>
+                        <li>Intuitive UI/UX design optimized for mobile users</li>
+                        <li>Secure and scalable backend integration</li>
+                        <li>Seamless deployment to App Store and Play Store</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-card-wrapper">
+                  <div class="service-card" onclick="selectServiceCard(this)">
+                    <div class="service-card-header">
+                      <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                      </div>
+                      <div class="service-title-group">
+                        <h3>Solutions</h3>
+                        <p>Cloud Solutions</p>
+                      </div>
+                      
+                    </div>
+                    <div class="service-card-content">
+                      <p>Optimizing your infrastructure for the cloud. We provide secure, scalable, and cost-effective cloud migration and management services.</p>
+                      <ul>
+                        <li>Expert cloud architecture design</li>
+                        <li>Automated scaling and monitoring</li>
+                        <li>Enhanced data security and disaster recovery</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-card-wrapper">
+                  <div class="service-card" onclick="selectServiceCard(this)">
+                    <div class="service-card-header">
+                      <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                      </div>
+                      <div class="service-title-group">
+                        <h3>Design</h3>
+                        <p>UI/UX Design</p>
+                      </div>
+                      
+                    </div>
+                    <div class="service-card-content">
+                      <p>Crafting beautiful and functional digital experiences. Our design process is data-driven and focused on user engagement.</p>
+                      <ul>
+                        <li>User-centered design approach</li>
+                        <li>Interactive prototyping and testing</li>
+                        <li>Modern, high-fidelity visual design</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="services-right">
+              <div class="services-sticky-content">
+                <div class="section-tag">Our services</div>
+                <h2 class="main-paragraph">We drive decisions through actionable data and proven insights.</h2>
+                <p class="section-subheading">Continuously testing, refining, and optimizing every process to deliver measurable business outcomes.</p>
+                <div class="services-cta">
+                  <a href="#services-all" class="btn btn-primary pill">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="clients">
           <div class="container">
             <h2 class="clients-heading">Trusted by industry leaders and innovators</h2>
@@ -126,7 +238,6 @@
                 <div class="client-logo"><img src="/src/assets/clients/Screenshot 2026-05-03 133147.png" alt="Client Logo"></div>
                 <div class="client-logo"><img src="/src/assets/clients/Screenshot 2026-05-03 133156.png" alt="Client Logo"></div>
                 <div class="client-logo"><img src="/src/assets/clients/Screenshot 2026-05-03 133210.png" alt="Client Logo"></div>
-                <!-- Duplicate for seamless loop -->
                 <div class="client-logo"><img src="/src/assets/clients/Screenshot 2026-05-03 133041.png" alt="Client Logo"></div>
                 <div class="client-logo"><img src="/src/assets/clients/Screenshot 2026-05-03 133052.png" alt="Client Logo"></div>
                 <div class="client-logo"><img src="/src/assets/clients/Screenshot 2026-05-03 133107.png" alt="Client Logo"></div>
@@ -142,8 +253,8 @@
         <section id="projects" class="projects">
           <div class="container">
             <div class="section-tag">Featured Works</div>
-            <h2 class="main-paragraph">Trusted by industry leaders and innovators</h2>
-            <p class="section-subheading">Trusted by industry leaders and innovators</p>
+            <h2 class="main-paragraph">Building trust through experience</h2>
+            <p class="section-subheading">Our track record speaks for itself.</p>
             
             <div class="projects-grid">
               <div class="project-card">
@@ -187,8 +298,185 @@
             </div>
           </div>
         </section>
+
+        <section id="testimonials" class="testimonials">
+          <div class="container-full">
+            <div class="section-header-centered">
+              <div class="section-tag-mini">Testimonials</div>
+              <h2 class="main-paragraph">Building trust through experience</h2>
+              <div class="section-divider-glow"></div>
+            </div>
+
+            <div class="testimonials-marquee">
+              <div class="testimonials-track">
+                <!-- Card 1 -->
+                <div class="liquid-card-small">
+                  <div class="card-glow"></div>
+                  <div class="card-header-small">
+                    <div class="card-logo-small">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666ZM17 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666Z"/></svg>
+                    </div>
+                  </div>
+                  <p class="card-message-small">"The development speed and quality exceeded our highest expectations."</p>
+                  <div class="card-footer-small">
+                    <h4 class="brand-name-small">Nexus Solutions</h4>
+                    <p class="reviewer-designation-small">CTO</p>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="liquid-card-small">
+                  <div class="card-glow"></div>
+                  <div class="card-header-small">
+                    <div class="card-logo-small">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666ZM17 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666Z"/></svg>
+                    </div>
+                  </div>
+                  <p class="card-message-small">"Robust security architecture and seamless integration. Migration was precision-perfect."</p>
+                  <div class="card-footer-small">
+                    <h4 class="brand-name-small">SafeGuard Inc</h4>
+                    <p class="reviewer-designation-small">Security Lead</p>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="liquid-card-small">
+                  <div class="card-glow"></div>
+                  <div class="card-header-small">
+                    <div class="card-logo-small">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666ZM17 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666Z"/></svg>
+                    </div>
+                  </div>
+                  <p class="card-message-small">"System performance tripled within weeks. Their optimization is industry-leading."</p>
+                  <div class="card-footer-small">
+                    <h4 class="brand-name-small">FastTrack</h4>
+                    <p class="reviewer-designation-small">Founder</p>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="liquid-card-small">
+                  <div class="card-glow"></div>
+                  <div class="card-header-small">
+                    <div class="card-logo-small">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666ZM17 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666Z"/></svg>
+                    </div>
+                  </div>
+                  <p class="card-message-small">"Scalability is no longer a concern. The architecture is future-proof and resilient."</p>
+                  <div class="card-footer-small">
+                    <h4 class="brand-name-small">DataCore</h4>
+                    <p class="reviewer-designation-small">Architect</p>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="liquid-card-small">
+                  <div class="card-glow"></div>
+                  <div class="card-header-small">
+                    <div class="card-logo-small">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666ZM17 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666Z"/></svg>
+                    </div>
+                  </div>
+                  <p class="card-message-small">"Our global deployment was flawless. Latency and performance were impressive."</p>
+                  <div class="card-footer-small">
+                    <h4 class="brand-name-small">Atlas Tech</h4>
+                    <p class="reviewer-designation-small">VP Eng</p>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="liquid-card-small">
+                  <div class="card-glow"></div>
+                  <div class="card-header-small">
+                    <div class="card-logo-small">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666ZM17 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666Z"/></svg>
+                    </div>
+                  </div>
+                  <p class="card-message-small">"Technically superior and professional partner for complex projects."</p>
+                  <div class="card-footer-small">
+                    <h4 class="brand-name-small">ComputeX</h4>
+                    <p class="reviewer-designation-small">DevOps Head</p>
+                  </div>
+                </div>
+
+                <!-- Duplicates for loop -->
+                <div class="liquid-card-small">
+                  <div class="card-glow"></div>
+                  <div class="card-header-small">
+                    <div class="card-logo-small"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666ZM17 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666Z"/></svg></div>
+                  </div>
+                  <p class="card-message-small">"The development speed and quality exceeded our highest expectations."</p>
+                  <div class="card-footer-small">
+                    <h4 class="brand-name-small">Nexus Solutions</h4>
+                    <p class="reviewer-designation-small">CTO</p>
+                  </div>
+                </div>
+                <div class="liquid-card-small">
+                  <div class="card-glow"></div>
+                  <div class="card-header-small">
+                    <div class="card-logo-small"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666ZM17 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666Z"/></svg></div>
+                  </div>
+                  <p class="card-message-small">"Robust security architecture and seamless integration."</p>
+                  <div class="card-footer-small">
+                    <h4 class="brand-name-small">SafeGuard Inc</h4>
+                    <p class="reviewer-designation-small">Security Lead</p>
+                  </div>
+                </div>
+                <div class="liquid-card-small">
+                  <div class="card-glow"></div>
+                  <div class="card-header-small">
+                    <div class="card-logo-small"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666ZM17 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1 0 2.5 1 4.666 3 6.666Z"/></svg></div>
+                  </div>
+                  <p class="card-message-small">"System performance tripled within weeks."</p>
+                  <div class="card-footer-small">
+                    <h4 class="brand-name-small">FastTrack</h4>
+                    <p class="reviewer-designation-small">Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section py-20 bg-black">
+          <div class="container mx-auto px-4" id="contact-root"></div>
+        </section>
       </main>
     </div>
+    <script>
+      function selectServiceCard(element) {
+        const isActive = element.classList.contains('active');
+        
+        if (!isActive) {
+          // Capture position before making it fixed
+          const rect = element.getBoundingClientRect();
+          element.style.setProperty('--start-x', rect.left + 'px');
+          element.style.setProperty('--start-y', rect.top + 'px');
+          element.style.setProperty('--start-width', rect.width + 'px');
+          element.style.setProperty('--start-height', rect.height + 'px');
+          
+          closeAllCards();
+          element.classList.add('active');
+          document.getElementById('modal-backdrop').classList.add('active');
+        } else {
+          closeAllCards();
+        }
+      }
+
+      function closeAllCards() {
+        const activeCard = document.querySelector('.service-card.active');
+        if (activeCard) {
+          activeCard.classList.remove('active');
+          activeCard.classList.add('closing');
+          setTimeout(() => {
+            activeCard.classList.remove('closing');
+          }, 600);
+        }
+        document.getElementById('modal-backdrop').classList.remove('active');
+      }
+    </script>
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

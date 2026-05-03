@@ -71,7 +71,6 @@ const animateCounters = () => {
   counters.forEach(counter => observer.observe(counter));
 };
 
-document.addEventListener('DOMContentLoaded', animateCounters);
 
 // Intersection Observer for Fade-in Animations
 const observerOptions = {
@@ -103,4 +102,38 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-console.log('Praskla Technology Website Initialized');
+
+// Testimonials Slider Logic (Move every 2 seconds)
+const initTestimonialSlider = () => {
+  const track = document.querySelector('.testimonials-track');
+  const cards = document.querySelectorAll('.liquid-card-small');
+  if (!track || cards.length === 0) return;
+
+  const cardWidth = cards[0].offsetWidth;
+  const gap = 32; // 2rem gap
+  let currentIndex = 0;
+  const totalCards = 6; // Original unique cards
+
+  setInterval(() => {
+    currentIndex++;
+    if (currentIndex >= totalCards) {
+      // Instant reset to beginning for seamless loop
+      track.style.transition = 'none';
+      currentIndex = 0;
+      track.style.transform = `translateX(0)`;
+      // Force reflow
+      track.offsetHeight;
+      // Re-enable transition for next move
+      track.style.transition = 'transform 0.8s cubic-bezier(0.65, 0, 0.35, 1)';
+    } else {
+      track.style.transform = `translateX(-${currentIndex * (cardWidth + gap)}px)`;
+    }
+  }, 2000);
+};
+
+
+// Main Initialization
+document.addEventListener('DOMContentLoaded', () => {
+  animateCounters();
+  initTestimonialSlider();
+});
