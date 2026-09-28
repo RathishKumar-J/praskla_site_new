@@ -1,9 +1,7 @@
 import React from 'react';
-import { cn } from '../../lib/utils';
-import {
-	LucideIcon,
-	PlusIcon,
-} from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { PlusIcon } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 type ContactInfoProps = React.ComponentProps<'div'> & {
 	icon: LucideIcon;
@@ -31,7 +29,7 @@ export function ContactCard({
 	return (
 		<div
 			className={cn(
-				'bg-card border relative grid h-full w-full shadow md:grid-cols-2 lg:grid-cols-3',
+				'bg-card border border-white/10 relative grid h-full w-full overflow-hidden rounded-[2rem] shadow-[0_24px_120px_rgba(57,20,71,0.32)] md:grid-cols-2 lg:grid-cols-3',
 				className,
 			)}
 			{...props}
@@ -41,14 +39,14 @@ export function ContactCard({
 			<PlusIcon className="absolute -bottom-3 -left-3 h-6 w-6" />
 			<PlusIcon className="absolute -right-3 -bottom-3 h-6 w-6" />
 			<div className="flex flex-col justify-between lg:col-span-2">
-				<div className="relative h-full space-y-4 px-4 py-8 md:p-8">
+				<div className="relative h-full space-y-6 px-6 py-8 md:p-10">
 					<h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
 						{title}
 					</h1>
 					<p className="text-muted-foreground max-w-xl text-sm md:text-base lg:text-lg">
 						{description}
 					</p>
-					<div className="grid gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
+					<div className="grid gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
 						{contactInfo?.map((info, index) => (
 							<ContactInfo key={index} {...info} />
 						))}
@@ -57,7 +55,7 @@ export function ContactCard({
 			</div>
 			<div
 				className={cn(
-					'bg-muted/40 flex h-full w-full items-center border-t p-5 md:col-span-1 md:border-t-0 md:border-l',
+					'bg-white/5 flex h-full w-full items-center border-t border-white/10 p-6 md:col-span-1 md:border-t-0 md:border-l',
 					formSectionClassName,
 				)}
 			>
@@ -75,13 +73,13 @@ function ContactInfo({
 	...props
 }: ContactInfoProps) {
 	return (
-		<div className={cn('flex items-center gap-3 py-3', className)} {...props}>
-			<div className="bg-muted/40 rounded-lg p-3">
+		<div className={cn('flex items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-4 shadow-sm', className)} {...props}>
+			<div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white">
 				<Icon className="h-5 w-5" />
 			</div>
 			<div>
-				<p className="font-medium">{label}</p>
-				<p className="text-muted-foreground text-xs">{value}</p>
+				<p className="font-medium text-white">{label}</p>
+				<p className="text-sm text-muted-foreground">{value}</p>
 			</div>
 		</div>
 	);
